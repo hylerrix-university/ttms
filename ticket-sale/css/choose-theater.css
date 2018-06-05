@@ -1,0 +1,215 @@
+ul, li, form, dl, dt, dd, div, ol {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+    outline: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.Cinema_Wrap {
+    width: 960px;
+}
+
+.Cinema_List .cinemaLi {
+    padding: 23px 0 23px 222px;
+    position: relative;
+    _overflow: hidden;
+}
+
+.Cinema_List .cinemaLi .pic {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    padding: 4px;
+    width: 196px;
+    position: absolute;
+    left: 0px;
+    _left: -222px;
+    top: 23px;
+}
+
+.Cinema_List .cinemaLi h5 {
+    font-size: 20px;
+    font-family: 微软雅黑;
+    margin-right: 29px;
+    line-height: 39px;
+    height: 39px;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.Cinema_List .cinemaLi h5 a.select_buy {
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    display: inline-block;
+    background: #ff7f00 no-repeat 16px 7px;
+    float: right;
+}
+
+.Cinema_List .cinemaLi h5 a {
+    color: #000;
+}
+
+.Cinema_List .cinemaLi dl {
+    padding-top: 10px;
+}
+
+.Cinema_List .cinemaLi dd {
+    line-height: 25px;
+    color: #333;
+}
+
+.Cinema_List .cinemaLi dd span {
+    color: #666;
+}
+
+/*展开场次*/
+.Cinema_List .sessionLi {
+    border-bottom: 1px dashed #d3d3d3;
+    padding-bottom: 27px;
+    margin-bottom: 24px;
+    width: 920px;
+}
+
+.Image_info {
+    border: 1px solid #ebebeb;
+    width: 120px;
+    float: left;
+    padding: 9px 12px 27px 11px;
+}
+
+.Image_info img {
+    width: 120px;
+    height: 177px;
+}
+
+.Image_info p {
+    margin: 0;
+    line-height: 20px;
+    color: #999;
+    padding-top: 5px;
+}
+
+.set_table {
+    float: right;
+    width: 760px;
+}
+
+.set_table table {
+    border: 1px solid #ebebeb;
+    border-collapse: collapse;
+    border-bottom: 0px;
+    color: #666666;
+}
+
+.set_table th {
+    background: #ebebeb;
+    line-height: 38px;
+    font-weight: normal;
+}
+
+.set_table td {
+    border-bottom: 1px solid #ebebeb;
+    padding: 24px 0;
+}
+
+.set_table td.time {
+    font-size: 16px;
+    font-family: Arial;
+}
+
+.set_table .time {
+    width: 153px;
+    text-align: center;
+}
+
+.set_table .set {
+    width: 200px;
+    text-align: center;
+}
+
+.set_table .lang {
+    width: 82px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.set_table span.tip {
+    background: #b07c7c;
+    display: inline-block;
+    padding: 0px 3px;
+    color: #fff;
+    margin-left: 3px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.set_table .ting {
+    width: 72px;
+    text-align: center;
+}
+
+.set_table .webprice {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.set_table .webprice em {
+    color: #e60020;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    display: inline-block;
+    width: 100px;
+    font-style: normal;
+}
+
+.set_table .webprice a.buy {
+    background: #e60020;
+}
+
+.set_table .webprice a.no_buy {
+    background: #a5a5a5;
+    cursor: default;
+}
+
+.set_table .webprice a {
+    width: 90px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    display: inline-block;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}

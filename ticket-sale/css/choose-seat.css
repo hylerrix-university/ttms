@@ -1,0 +1,395 @@
+/*订票信息*/
+.mainHeader {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border: 0px;
+    border-collapse: collapse;
+}
+
+img {
+    border: none;
+    border: 0;
+}
+
+.book_step_two {
+    flex: 1;
+    min-width: 920px;
+    max-width: 920px;
+    border: 1px solid #e4e5e9;
+    margin: 8px 0;
+}
+
+.book_step_two td.img {
+    width: 85px;
+}
+
+.book_step_two td {
+    color: #333;
+    font-size: 14px;
+}
+
+.book_step_two td.img img {
+    width: 85px;
+    height: 120px;
+    padding: 10px;
+}
+
+.book_step_two td {
+    color: #333;
+    font-size: 14px;
+}
+
+.book_step_two td .red {
+    color: #F00;
+}
+
+/*订票座位*/
+.mainBody {
+    display: flex;
+    justify-content: center;
+}
+
+.book_step_main {
+    border: 1px solid #e4e5e9;
+    border-right: 0px;
+    overflow: hidden;
+    min-width: 920px;
+    max-width: 920px;
+}
+
+.book_step_left {
+    width: 679px;
+    float: left;
+}
+
+.book_step_right {
+    width: 240px;
+    float: left;
+    height: auto !important;
+    height: 512px;
+    min-height: 512px;
+    background: #ebebeb;
+}
+
+.book_step_left .gray {
+    height: 40px;
+    line-height: 40px;
+    background: #ebebeb;
+    margin-bottom: 20px;
+}
+
+.book_step_left .sitting {
+    width: 674px;
+    margin: 0 auto;
+}
+
+.book_step_left .sitting h5 {
+    background: url(../img/yingmu_bg.jpg) no-repeat center top;
+    padding-top: 26px;
+    height: 46px;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333;
+}
+
+.sitting_list dl {
+    height: 20px;
+    overflow: hidden;
+    clear: both;
+    margin-bottom: 5px;
+    padding: 0 60px;
+    background-image: url(../img/row.jpg);
+    background-repeat: no-repeat;
+}
+
+.sitting_list dl dd {
+    width: 22px;
+    float: left;
+}
+
+.sitting_list dl dd div {
+    background-image: url(../img/sit_ico.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 20px;
+}
+
+.sitting_list dl dd div.nosit {
+    background: none;
+}
+
+.sitting_list dl dd div.kx {
+    background-position: 0 0;
+}
+
+.sitting_list dl dd div.yx {
+    background-position: -108px 0;
+}
+
+.sitting_list dl dd div.ys {
+    background-position: 0 -26px;
+}
+
+.sitting_list dl.row1 {
+    background-position: 0 0px;
+}
+
+.sitting_list dl.row2 {
+    background-position: 0 -24px;
+}
+
+.sitting_list dl.row3 {
+    background-position: 0 -49px;
+    margin-bottom: 26px;
+}
+
+.sitting_list dl.row4 {
+    background-position: 0 -101px;
+}
+
+.sitting_list dl.row5 {
+    background-position: 0 -126px;
+}
+
+.sitting_list dl.row6 {
+    background-position: 0 -151px;
+}
+
+.sitting_list dl.row7 {
+    background-position: 0 -176px;
+}
+
+.sitting_list dl.row8 {
+    background-position: 0 -200px;
+}
+
+.sitting_list dl.row9 {
+    background-position: 0 -225px;
+}
+
+.sitting_list dl.row10 {
+    background-position: 0 -252px;
+}
+
+.sitting_list dl.row11 {
+    background-position: 0 -297px;
+}
+
+.clear {
+    clear: both;
+    height: 0px;
+    overflow: hidden;
+}
+
+.book_step_right h1 {
+    background: #bcbcbc;
+    color: #fff;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    margin: 0;
+    height: 40px;
+    padding-left: 15px;
+    line-height: 40px;
+    font-weight: normal;
+}
+
+.select_sit {
+    padding: 10px;
+    overflow: hidden;
+}
+
+.select_sit dl {
+    border-bottom: 1px dotted #333;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.select_sit dl dd {
+    width: 84px;
+    float: left;
+    background-image: url(../img/sit_ico.png);
+    padding-left: 24px;
+    height: 26px;
+    color: #333;
+    background-repeat: no-repeat;
+}
+
+.select_sit dl dd.yx {
+    background-position: -108px 0;
+}
+
+.select_sit dl dd.ys {
+    background-position: 0 -25px;
+}
+
+.select_sit h5 {
+    font-weight: normal;
+    font-size: 12px;
+    color: #333;
+    margin: 0;
+    padding: 7px 0 14px 0;
+}
+
+.select_sit ul {
+    padding-bottom: 24px;
+    overflow: hidden;
+}
+
+.select_sit ul ol {
+    width: 68px;
+    height: 23px;
+    background: #f47920;
+    text-align: center;
+    color: #fff;
+    float: left;
+    line-height: 23px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.select_sit table td {
+    line-height: 22px;
+    padding-bottom: 5px;
+}
+
+.select_sit table td .text {
+    width: 201px;
+    background: #fff;
+    border: 0;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+}
+
+.select_sit table td img {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.select_sit table td span {
+    width: 50px;
+    display: inline-block;
+    line-height: 15px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.select_sit table td .btn {
+    background: #f0002d;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    border: 0px;
+    width: 116px;
+    height: 36px;
+    cursor: pointer;
+}
+
+/*弹出框订单信息*/
+.payBox {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    z-index: 400;
+}
+
+.payBox h1.ico1 {
+    background: url(../img/f_ico1.jpg) no-repeat left top;
+}
+
+.payBox h1 {
+    margin: 0 0 28px 0;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 63px;
+    color: #a5a5a5;
+    font-size: 19px;
+    font-family: 微软雅黑;
+    padding-right: 16px;
+    font-weight: normal;
+}
+
+.payBox h1 a.close {
+    float: right;
+    width: 29px;
+    height: 27px;
+    display: block;
+    margin-top: 11px;
+}
+
+a {
+    text-decoration: none;
+    color: #666666;
+    outline: none;
+}
+
+.payInfo_main {
+    color: #333;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.payInfo_main table {
+    margin-left: 43px;
+}
+
+.payInfo_main th {
+    font-size: 18px;
+    text-align: left;
+    color: #333;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.payInfo_main th span {
+    color: #e60020;
+}
+
+.payInfo_main td {
+    padding-bottom: 5px;
+}
+
+.payInfo_main td span {
+    color: #e60020;
+    font-size: 16px;
+}
+
+.payInfo_main td b {
+    display: inline-block;
+    background: url(../img/piao.jpg) repeat-x left top;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.payInfo_main .btn {
+    position: absolute;
+    bottom: 0;
+    background: url(../img/bg2.jpg) repeat-x left top;
+    height: 81px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payInfo_main .btn a {
+    display: inline-block;
+    width: 105px;
+    height: 44px;
+    line-height: 44px;
+    font-family: 微软雅黑;
+    color: #fff;
+    background: #f0002d;
+    margin-top: 18px;
+}
