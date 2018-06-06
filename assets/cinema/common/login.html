@@ -1,0 +1,52 @@
+
+ <!--/*登录信息/-->
+ <div class="fancyBoxbg"></div>
+ <div class="fancyBox">
+ <h1><a href="#" class="close"></a>星星用户请登录！</h1>
+ <div class="contain_left">
+ <h5>如果您是会员,请快速登录</h5>
+ <table cellpadding="0" cellspacing="0" border="0" class="f_login_table">
+ <tr>
+ <td class="w">用户名：</td>
+ <td><div class="name"><input class="text" type="text" value="注册邮箱/手机号码" onblur="if(this.value=='')this.value='注册邮箱/手机号码';" onfocus="this.value='';"/></div></td>
+ </tr>
+ <tr>
+ <td class="w">登录密码：</td>
+ <td><div class="password"><input class="text" type="text" value="登陆密码" onblur="if(this.value=='')this.value='登陆密码';" onfocus="this.value='';"/><a class="Keyboard" href="#" title="键盘输入"></a></div></td>
+ </tr>
+ <tr>
+ <td class="w">验证码：</td>
+ <td><input class="text" type="text" value=" 输入验证码" onblur="if(this.value=='')this.value=' 输入验证码';" onfocus="this.value='';"/><img src="images/code.jpg"  class="code"/></td>
+ </tr>
+ <tr>
+ <td class="w"></td>
+ <td><input type="button" class="btn" value="立即登录" onclick="location.href='购票第二步.html';return false;"/></td>
+ </tr>
+ </table>
+ </div>
+ <div class="contain_right">
+ <h5>如果您还没是我们的会员，马上注册一个。</h5>
+ <div class="reg_btn"><a href="注册.html" title="马上注册"></a></div>
+ </div>
+ <div class="clear"></div>
+ </div>
+ <script type="text/javascript">  
+ jQuery(document).ready(function(){
+ var w = jQuery(window).width();
+ var h = jQuery(document).height();
+ var t = (jQuery(window).height()-403)/2;
+ var l = (jQuery(window).width()-591)/2;
+ jQuery(".fancyBoxbg").css({ height: h, width: w }); 
+//  
+jQuery(".set_table a.buy").bind("click", function() {	
+ jQuery(".fancyBoxbg").show();
+ jQuery(".fancyBox").show();
+ jQuery(".fancyBox").css({ top: t, left: l}); 
+ });
+  jQuery(".fancyBox a.close").bind("click", function() {	
+ jQuery(".fancyBoxbg").hide();
+ jQuery(".fancyBox").hide();
+ });
+  });
+ </script>
+ <!--/*登录信息 end/-->

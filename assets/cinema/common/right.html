@@ -1,0 +1,118 @@
+<div class="right_quick_ticket">
+<ul>
+<li>
+<input type="text" value="选择影院" onblur="if(this.value=='')this.value='选择影院';" onfocus="this.value='';" class="text text1" id="selectflim">
+<div class="hide_select">
+<a href="javascript:void(0);">星星国际</a>
+<a href="javascript:void(0);">UME影城安贞店</a>
+<a href="javascript:void(0);">中影火山湖电影城番禺店</a>
+<a href="javascript:void(0);">广州星汇电影城</a>
+<a href="javascript:void(0);">广州保利国际影城</a>
+<a href="javascript:void(0);">广州上影联和电影城</a>
+</div>
+</li>
+<li>
+<input type="text" value="选择电影"  onblur="if(this.value=='')this.value='选择电影';" onfocus="this.value='';" class="text text2">
+<div class="hide_select">
+<a href="javascript:void(0);">澳门风云</a>
+<a href="javascript:void(0);">怪兽大学</a>
+<a href="javascript:void(0);">夏日示爱</a>
+<a href="javascript:void(0);">激战</a>
+<a href="javascript:void(0);">超级经纪人</a>
+<a href="javascript:void(0);">逆袭</a>
+<a href="javascript:void(0);">极乐空间</a>
+</div>
+</li>
+<li>
+<input type="text" value="选择时间"  onblur="if(this.value=='')this.value='选择时间';" onfocus="this.value='';"  class="text text3">
+<div class="hide_select">
+<a href="javascript:void(0);">2013-10-23(周三)</a>
+<a href="javascript:void(0);">2013-10-24(周四)</a>
+<a href="javascript:void(0);">2013-10-25(周五)</a>
+</div>
+</li>
+<li>
+<input type="text" value="选择场次"  onblur="if(this.value=='')this.value='选择场次';" onfocus="this.value='';"  class="text text4">
+<div class="hide_select">
+<a href="javascript:void(0);">05：30</a>
+<a href="javascript:void(0);">18：30</a>
+<a href="javascript:void(0);">22：30</a>
+</div>
+</li>
+<li><a href="#" title="立即购票" class="btn"></a></li>
+</ul>
+      	<script type="text/javascript">
+	jQuery(".right_quick_ticket li .text").bind("click",function(){
+		jQuery(this).next(".hide_select").show();
+		jQuery(this).parent().css("z-index","2");
+	})
+	jQuery(".right_quick_ticket li").bind("mouseleave",function(){
+		jQuery(this).find(".hide_select").hide();
+		jQuery(this).attr("style"," ");
+	})	
+	//
+	    $(".right_quick_ticket li .hide_select a").bind("click", function () {
+        var DownText = $(this).text();
+        $(this).parent().prev().val(DownText);
+		$(this).parent().hide();
+    })
+</script>
+</div>
+<!--/*即将上映*/-->
+<div class="color_right">
+<div class="title"><a href="即将上映.html">更多>></a><b>即将上映</b></div>
+<ul class="Upcoming">
+<li>
+<a href="即将上映_详细页.html" class="view">预先片</a>
+<div class="pic"><a href="#"><img src="images/img04.jpg"></a></div>
+<h5><a href="#">全民目击</a></h5>
+<p>
+<b>9月13日上映</b>
+类型：剧情/悬疑<br />
+片长：119分钟
+</p>
+</li>
+<li>
+<a href="#" class="view">预先片</a>
+<div class="pic"><a href="#"><img src="images/img04.jpg"></a></div>
+<h5><a href="#">全民目击</a></h5>
+<p>
+<b>9月13日上映</b>
+类型：剧情/悬疑<br />
+片长：119分钟
+</p>
+</li>
+<li>
+<a href="#" class="view">预先片</a>
+<div class="pic"><a href="#"><img src="images/img04.jpg"></a></div>
+<h5><a href="#">全民目击</a></h5>
+<p>
+<b>9月13日上映</b>
+类型：剧情/悬疑<br />
+片长：119分钟
+</p>
+</li>
+<li>
+<a href="#" class="view">预先片</a>
+<div class="pic"><a href="#"><img src="images/img04.jpg"></a></div>
+<h5><a href="#">全民目击</a></h5>
+<p>
+<b>9月13日上映</b>
+类型：剧情/悬疑<br />
+片长：119分钟
+</p>
+</li>
+<li>
+<a href="#" class="view">预先片</a>
+<div class="pic"><a href="#"><img src="images/img04.jpg"></a></div>
+<h5><a href="#">全民目击</a></h5>
+<p>
+<b>9月13日上映</b>
+类型：剧情/悬疑<br />
+片长：119分钟
+</p>
+</li>
+</ul>
+<script type="text/javascript">jQuery(".Upcoming li:last").addClass("end");</script>
+</div>
+<!--/*即将上映 end*/-->

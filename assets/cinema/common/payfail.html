@@ -1,0 +1,80 @@
+
+ <!--/*登录信息/-->
+ <div class="fancyBoxbg"></div>
+ <div class="payBox">
+ <!--/*支付信息*/-->
+  <div class="payInfo_list">
+ <h1 class="ico1"><a href="#" class="close"></a>订单信息</h1>
+ <div class="payInfo_main">
+ <table>
+ <tr>
+ <th colspan="2">订单号：<span>2014021088888888</span></th>
+ </tr>
+ <tr>
+ <td>影片：<span>澳门风云</span></td><td></td>
+ </tr>
+ <tr>
+ <td>影厅：<span>IMAX厅</span></td><td></td>
+ </tr>
+ <tr>
+ <td>影城：<span>星星国际影城</span></td><td></td>
+ </tr>
+ <tr>
+ <td>时间：<span>2014-02-10 13:30</span></td><td></td>
+ </tr>
+ <tr>
+ <td>数量：5张  <b>5排12座</b><b>8排10座</b><b>8排11座</b><b>8排12座</b><b>8排13座</b></td><td></td>
+ </tr>
+ <tr>
+ <td>单价： <span>元/张 ，总金额：  元</span></td><td></td>
+ </tr>
+ <tr>
+ <td colspan="2">手机号码：13318702255</td>
+ </tr>
+ </table>
+ <div class="btn"> <a href="javascript:void(0);" class="sure" onclick="jQuery('.payInfo_list').hide();jQuery('.paysuess').show();">确定支付</a></div>
+ </div>
+ </div>
+  <!--/*支付信息 end*/-->
+ <!--/*支付失败*/-->
+ <div class="payfailed" style="display:none;">
+ <h1 class="ico"><a href="#" class="close"></a>网上支付提示！</h1>
+ <div class="payfailed_main">
+ <span>订单未支付成功，请重新支付！</span>
+ <a href="javascript:void(0);" class="sure" onclick="jQuery('.payfailed_main').parent().parent().hide();jQuery('.fancyBoxbg').hide();">确定</a>
+ </div>
+ </div>
+ <!--/*支付失败 end*/-->
+ <!--/*支付成功*/-->
+ <div class="paysuess" style="display:none;">
+ <h1 class="ico"><a href="#" class="close"></a>网上支付提示！</h1>
+ <div class="paysuess_main">
+ <p>支付完成前，请不要关闭此支付验证窗口。<br />
+ 支付完成后，请要所您支付的情况点击下面按钮。<br />
+  <a href="javascript:void(0);">支付遇到问题</a> <a href="index.html" class="sure" onclick="jQuery('.paysuess_main').parent().parent().hide();jQuery('.fancyBoxbg').hide();">支付完成</a>
+ </p>
+ </div>
+ </div>
+ <!--/*支付成功 end*/-->
+ </div>
+ <script type="text/javascript">  
+ jQuery(document).ready(function(){
+ var w = jQuery(window).width();
+ var h = jQuery(document).height();
+ var t = (jQuery(window).height()-403)/2;
+ var l = (jQuery(window).width()-689)/2;
+ jQuery(".fancyBoxbg").css({ height: h, width: w }); 
+//  
+jQuery(".pay_btn a").bind("click", function() {	
+ jQuery(".fancyBoxbg").show();
+ jQuery(".payBox").show();
+ jQuery(".payBox").css({ top: t, left: l}); 
+ });
+  jQuery(".payBox a.close").bind("click", function() {	
+ jQuery(".fancyBoxbg").hide();
+ jQuery(".payBox").hide();
+ });
+  });
+
+ </script>
+ <!--/*登录信息 end/-->
