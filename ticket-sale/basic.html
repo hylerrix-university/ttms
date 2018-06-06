@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>售票</title>
+	<base href="<%=basePath%>">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<script type="application/x-javascript">
+		//绑定事件，将页面平滑到指定窗口(初始化加载页面)
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
+		function hideURLbar(){ window.scrollTo(0,1); } 
+    </script>
+     <link rel="stylesheet" href="../layui/css/layui.css" media="all">
+     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	 <link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="./css/home.css">
+	<script src="home/js/jquery-1.12.0.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<!-- header部分 -->
+		    <div class="navbar-header">
+		    	<!-- 适配移动端时的显示 -->
+		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#clickbar">
+    	            <span class="sr-only">切换导航</span>
+    	            <span class="icon-bar"></span>
+    	            <span class="icon-bar"></span>
+    	            <span class="icon-bar"></span>
+    	        </button>
+    	        <!-- 标题 -->
+		        <a class="navbar-brand" href="home.jsp">这就是命影院票务管理系统</a>
+		    </div>
+		    <!-- 登录人员信息设置 -->
+		    <ul class="nav navbar-nav navbar-right">
+		    	<li class="dropdown">
+			    	<a href="#" class="dropdown-toggle fli" data-toggle="dropdown">
+			    		<img src="/TTMS_Web2/Image?method=image" alt="无法显示">
+			    	</a>
+			    	<ul class="dropdown-menu">
+			    		<li class="ph">
+			    			<a href="/TTMS_Web2/Image?method=search"><i class="icon-modify icon"></i>修改信息</a>
+			    		</li>
+			    		<li class="ph">
+			    			<a href="/TTMS_Web2/login.jsp"><i class="icon-logout icon"></i>退出登录</a>
+			    		</li>
+			    	</ul>
+		    	</li>
+		    </ul>
+		    <!-- 全局搜索 -->
+			<form class="navbar-form navbar-right">
+              <input type="text" class="form-control globals" value="Search..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search...';}">
+            </form> 
+    		<!-- 侧边信息栏 -->
+            <div class=" navbar-nav sidebar">
+                <div class="collapse navbar-collapse"  id="clickbar">
+    				<ul class="nav">
+                        <li><a href="Movie?method=searchByPage"><i class="icon-movies icon"></i>影片管理</a></li>
+                        <li><a href="Theatre?method=searchByPage"><i class="icon-theatre icon"></i>影厅管理</a></li>
+                        <li><a href="home_root/people.jsp"><i class="icon-human icon"></i>成员管理</a></li>
+                        <li><a href="Order?method=searchSaleByPage"><i class="icon-schedule icon"></i>订单管理</a></li>
+                        <li  class="active"><a href="home_root/finance.jsp"><i class="icon-finance icon"></i>财务报表</a></li>
+                        <li><a href="home/inform.jsp"><i class="icon-notice icon"></i>公告</a></li>
+                         
+                    </ul>
+    			</div>
+            </div>	
+		</nav>
+		<div id="page-wrapper" class="pa-wrp">
+			<div class="grap">
+				<div class="header">
+					<div class="page-hd">
+					售票
+					</div>
+				</div>
+				<ol class="breadcrumb bg-head">		
+					<li><a href="home.jsp">Home</a></li>
+				    <li class="active">售票</li>
+				</ol>
+				<div>
+				<div style="padding: 20px; background-color: #F2F2F2;">
+					<div class="layui-row layui-col-space15">
+		
+						<div class="layui-col-md2 layui-col-sm3 layui-col-xs4">
+							<div class="tab-movie-list">
+								<div class="movie-card-wrap">
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card" data-spm-anchor-id="a1z21.3046609.w2.6">
+										<div class="movie-card-poster">
+											<img width="160" height="224" data-src="https://img.alicdn.com/bao/uploaded/i4/TB1xcwSheySBuNjy1zdXXXPxFXa_.jpg_160x240.jpg" src="https://img.alicdn.com/bao/uploaded/i4/TB1xcwSheySBuNjy1zdXXXPxFXa_.jpg_160x240.jpg">
+										</div>
+										<div class="movie-card-name">
+											<span class="bt-l">复仇者联盟3：无限战争</span>
+											<span class="bt-r">8.8</span>
+										</div>
+									</a>
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card-buy" data-spm-anchor-id="a1z21.3046609.w2.7">选座购票</a>
+								</div>
+							</div>
+						</div>
+		
+						<div class="layui-col-md2 layui-col-sm3 layui-col-xs4">
+							<div class="tab-movie-list">
+								<div class="movie-card-wrap">
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card" data-spm-anchor-id="a1z21.3046609.w2.8">
+										<div class="movie-card-tag"><i class="t-103"></i></div>
+										<div class="movie-card-poster">
+											<img width="160" height="224" data-src="https://img.alicdn.com/bao/uploaded/i3/TB1VY70niOYBuNjSsD4XXbSkFXa_.jpg_160x240.jpg" src="https://img.alicdn.com/bao/uploaded/i3/TB1VY70niOYBuNjSsD4XXbSkFXa_.jpg_160x240.jpg">
+										</div>
+										<div class="movie-card-name">
+											<span class="bt-l">侏罗纪世界2</span>
+											<span class="bt-r"></span>
+										</div>
+									</a>
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card-buy" data-spm-anchor-id="a1z21.3046609.w2.9">选座购票</a>
+								</div>
+							</div>
+						</div>
+						<div class="layui-col-md2 layui-col-sm3 layui-col-xs4">
+							<div class="tab-movie-list">
+								<div class="movie-card-wrap">
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card" data-spm-anchor-id="a1z21.3046609.w2.10">
+										<div class="movie-card-tag"><i class="t-"></i></div>
+										<div class="movie-card-poster">
+											<img width="160" height="224" data-src="https://img.alicdn.com/bao/uploaded/i4/TB1zFl8uCtYBeNjSspaXXaOOFXa_.jpg_160x240.jpg" src="https://img.alicdn.com/bao/uploaded/i4/TB1zFl8uCtYBeNjSspaXXaOOFXa_.jpg_160x240.jpg">
+										</div>
+										<div class="movie-card-name">
+											<span class="bt-l">哆啦A梦：大雄的金银岛</span>
+											<span class="bt-r">8.2</span>
+										</div>
+									</a>
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card-buy" data-spm-anchor-id="a1z21.3046609.w2.11">选座购票</a>
+								</div>
+							</div>
+						</div>
+		
+						<div class="layui-col-md2 layui-col-sm3 layui-col-xs4">
+							<div class="tab-movie-list">
+								<div class="movie-card-wrap">
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card" data-spm-anchor-id="a1z21.3046609.w2.12">
+										<div class="movie-card-tag"><i class="t-"></i></div>
+										<div class="movie-card-poster">
+											<img width="160" height="224" data-src="https://img.alicdn.com/bao/uploaded/i4/TB12.ylqmtYBeNjSspkXXbU8VXa_.jpg_160x240.jpg" src="https://img.alicdn.com/bao/uploaded/i4/TB12.ylqmtYBeNjSspkXXbU8VXa_.jpg_160x240.jpg">
+										</div>
+										<div class="movie-card-name">
+											<span class="bt-l">寂静之地</span>
+											<span class="bt-r">7.6</span>
+										</div>
+									</a>
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card-buy" data-spm-anchor-id="a1z21.3046609.w2.13">选座购票</a>
+								</div>
+							</div>
+						</div>
+		
+						<div class="layui-col-md2 layui-col-sm3 layui-col-xs4">
+							<div class="tab-movie-list">
+								<div class="movie-card-wrap">
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card">
+										<div class="movie-card-tag"><i class="t-"></i></div>
+										<div class="movie-card-poster">
+											<img width="160" height="224" data-src="https://img.alicdn.com/bao/uploaded/i4/TB12hVXrY5YBuNjSspoXXbeNFXa_.jpg_160x240.jpg" src="https://img.alicdn.com/bao/uploaded/i4/TB12hVXrY5YBuNjSspoXXbeNFXa_.jpg_160x240.jpg">
+										</div>
+										<div class="movie-card-name">
+											<span class="bt-l">完美陌生人</span>
+											<span class="bt-r">8.5</span>
+										</div>
+									</a>
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card-buy">选座购票</a>
+								</div>
+							</div>
+						</div>
+		
+						<div class="layui-col-md2 layui-col-sm3 layui-col-xs4">
+							<div class="tab-movie-list">
+								<div class="movie-card-wrap">
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card">
+										<div class="movie-card-tag"><i class="t-201"></i></div>
+										<div class="movie-card-poster">
+											<img width="160" height="224" data-src="https://img.alicdn.com/bao/uploaded/i1/TB17LWBpH1YBuNjSszhXXcUsFXa_.jpg_160x240.jpg" src="https://img.alicdn.com/bao/uploaded/i1/TB17LWBpH1YBuNjSszhXXcUsFXa_.jpg_160x240.jpg">
+										</div>
+										<div class="movie-card-name">
+											<span class="bt-l">游侠索罗：星球大战外传</span>
+											<span class="bt-r">8.0</span>
+										</div>
+									</a>
+									<a href="javascript:;" onclick="Step01_selectSeat(this)" class="movie-card-buy">选座购票</a>
+								</div>
+							</div>
+						</div>
+		
+					</div>
+				</div>
+		</div>
+				<script src="../layui/layui.js"></script>
+				<script src="./js/index.js"></script>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="home/js/bootstrap.min.js" ></script>
+</body>
+</html>

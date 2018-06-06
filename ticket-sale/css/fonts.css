@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?c5f44e');
+    src:  url('fonts/icomoon.eot?c5f44e#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?c5f44e') format('truetype'),
+      url('fonts/icomoon.woff?c5f44e') format('woff'),
+      url('fonts/icomoon.svg?c5f44e#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-edit-people:before {
+    content: "\e901";
+  }
+  .icon-edit-table:before {
+    content: "\e902";
+  }
+  .icon-edit-pencil:before {
+    content: "\e903";
+  }
+  .icon-search-people-d:before {
+    content: "\e904";
+  }
+  .icon-search-table:before {
+    content: "\e905";
+  }
+  .icon-search-people:before {
+    content: "\e906";
+  }
+  .icon-search-glass:before {
+    content: "\e907";
+  }
+  .icon-human-photo:before {
+    content: "\e908";
+  }
+  .icon-lock:before {
+    content: "\e909";
+  }
+  .icon-address:before {
+    content: "\e90a";
+  }
+  .icon-inform-horn:before {
+    content: "\e90b";
+  }
+  .icon-inform-board:before {
+    content: "\e90c";
+  }
+  .icon-delete:before {
+    content: "\e90d";
+  }
+  .icon-delete-stop-s:before {
+    content: "\e90e";
+  }
+  .icon-delete-stop-k:before {
+    content: "\e90f";
+  }
+  .icon-delete-little:before {
+    content: "\e910";
+  }/*
+  #icon-del-little:before {
+    content: "\e910";
+  }*/
+  .icon-delete-dustbin:before {
+    content: "\e911";
+  }
+  .icon-birthday:before {
+    content: "\e912";
+    color: #545454;
+  }
+  .icon-phone:before {
+    content: "\e913";
+  }
+  .icon-add:before {
+    content: "\e914";
+  }
+  .icon-add-little:before {
+    content: "\e915";
+  }
+  .icon-email:before {
+    content: "\e916";
+  }
+  
+  .icon-seat-s:before {
+    content: "\e917";
+  }/*
+  #icon-seat-s:before {
+    content: "\e917";
+  }*/
+  .icon-seat-k:before {
+    content: "\e918";
+  }/*
+  #icon-seat-k:before {
+    content: "\e918";
+  }*/
+  .icon-schedule:before {
+    content: "\e919";
+  }
+  .icon-finance:before {
+    content: "\e91a";
+  }
+  .icon-modify:before {
+    content: "\e91b";
+  }
+  .icon-notice:before {
+    content: "\e91c";
+  }
+  .icon-human:before {
+    content: "\e91d";
+  }
+  .icon-theatre:before {
+    content: "\e91e";
+  }
+  .icon-logout:before {
+    content: "\e91f";
+  }
+  .icon-movies:before {
+    content: "\e920";
+  }
+  
