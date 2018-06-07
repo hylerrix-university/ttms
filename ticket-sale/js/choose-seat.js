@@ -5,12 +5,82 @@ window.onload = function () {
         ,value: []
     });
 
+    // 从 localstorage 里获取订单信息，这里先这设置，需要后端接入数据
+    layui.data('ticket-sale', {
+        key: 'orderId'
+        ,value: '2018061088888888'
+    })
+    layui.data('ticket-sale', {
+        key: 'movieName'
+        ,value: '侏罗纪世界2'
+    })
+    layui.data('ticket-sale', {
+        key: 'movieHall'
+        ,value: 'IMAX厅'
+    })
+    layui.data('ticket-sale', {
+        key: 'theater'
+        ,value: '星星国际影城'
+    })
+    layui.data('ticket-sale', {
+        key: 'session'
+        ,value: '2014-02-10 13:30'
+    })
+    layui.data('ticket-sale', {
+        key: 'time'
+        ,value: '94'
+    })
+    layui.data('ticket-sale', {
+        key: 'language'
+        ,value: '粤语'
+    })
+    layui.data('ticket-sale', {
+        key: 'count'
+        ,value: 0
+    })
+    layui.data('ticket-sale', {
+        key: 'perMoney'
+        ,value: '80'
+    })
+    layui.data('ticket-sale', {
+        key: 'tel'
+        ,value: '13318702255'
+    });
+
+    renderOrderInfo()
+
     let seatInfo = loadSeatInfo()
     renderSeatInfo(seatInfo)
 }
 
-// 座位信息绑定在全局 window 对象上
+function renderOrderInfo () {
+    let ticketSale = layui.data('ticket-sale')
 
+    let domString = ''
+    domString += `
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+                <td rowspan="3" class="img"><img src="https://img.alicdn.com/bao/uploaded/i3/TB1VY70niOYBuNjSsD4XXbSkFXa_.jpg_160x240.jpg"></td>
+                <td width="f1">${ ticketSale.movieName }</td>
+                <td>${ ticketSale.theater }</td>
+                <td>${ ticketSale.movieHall }</td>
+            </tr>
+            <tr>
+                <td width="f1">场次：${ ticketSale.session }</td>
+                <td>片长：${ ticketSale.time }</td>
+                <td>语言：${ ticketSale.language }</td>
+            </tr>
+            <tr>
+                <td>正价：${ ticketSale.perMoney }</td>
+                <td>网购价:<b class="red">￥${ ticketSale.perMoney }</b></td>
+                <td><span class="red">会员价按会员折扣标准执行</span></td>
+            </tr>
+            </tbody>
+        </table>
+    `
+    $('#orderWrap').append($.parseHTML(domString))
+}
 
 // 0: 没座位，1: 可选座位，2: 已选座位，3: 已售座位
 function loadSeatInfo () {
@@ -129,49 +199,63 @@ function renderPositionInfo () {
     // render
     let domString = ''
     positionSelected.forEach(v => {
-        domString += `<ol>${v[0]} 排 ${v[1]} 座</ol>`
+        domString += `<ol>${parseInt(v[0]) + 1} 排 ${parseInt(v[1]) + 1} 座</ol>`
     })
     $('#selectedSeat').append($.parseHTML(domString))
 }
 
-function Step03_selectSeat (el) {
-    console.log(el)
+function Step03_selectSeat () {
+
+    // 判断是否选座位
+    let ticketSale = layui.data('ticket-sale')
+    let positionSelected = ticketSale.positionSelected
+    if (positionSelected.length === 0) {
+        layui.use(['layer'], function () {
+            layer.msg('您还没有选择座位！')
+        })
+        return
+    }
+
+    let count = positionSelected.length
+    layui.data('ticket-sale', {
+        key: 'count'
+        ,value: count
+    })
 
     layui.use('layer', function(){
-        layer.open({
-            type: 1,
-            skin: 'demo-class', //加上边框
-            area: ['689px', '403px'], //宽高
-            title: '订单信息',
-            content: `
+        let content = `
                 <div class="payBox" style="display: block;">
                     <!--/*支付信息*/-->
                     <div class="payInfo_list">
                         <div class="payInfo_main">
                             <table>
                                 <tbody><tr>
-                                    <th colspan="2">订单号：<span>2014021088888888</span></th>
+                                    <th colspan="2">订单号：<span>${ ticketSale.orderId }</span></th>
                                 </tr>
                                 <tr>
-                                    <td>影片：<span>澳门风云</span></td><td></td>
+                                    <td>影片：<span>${ ticketSale.movieName }</span></td><td></td>
                                 </tr>
                                 <tr>
-                                    <td>影厅：<span>IMAX厅</span></td><td></td>
+                                    <td>影厅：<span>${ ticketSale.movieHall }</span></td><td></td>
                                 </tr>
                                 <tr>
-                                    <td>影城：<span>星星国际影城</span></td><td></td>
+                                    <td>影城：<span>${ ticketSale.theater }</span></td><td></td>
                                 </tr>
                                 <tr>
-                                    <td>时间：<span>2014-02-10 13:30</span></td><td></td>
+                                    <td>时间：<span>${ ticketSale.session }</span></td><td></td>
                                 </tr>
                                 <tr>
-                                    <td>数量：5张  <b>5排12座</b><b>8排10座</b><b>8排11座</b><b>8排12座</b><b>8排13座</b></td><td></td>
+                                    <td>数量：${ count } 张`
+        positionSelected.forEach(v => {
+            content += `<b>${parseInt(v[0]) + 1} 排 ${parseInt(v[1]) + 1} 座</b>`
+        })
+        content += `</td><td></td>
                                 </tr>
                                 <tr>
-                                    <td>单价： <span>元/张 ，总金额：  元</span></td><td></td>
+                                    <td>单价： ${ ticketSale.perMoney }<span>元/张 ，总金额： ${ ticketSale.count * ticketSale.perMoney } 元</span></td><td></td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2">手机号码：13318702255</td>
+                                    <td colspan="2">手机号码：${ ticketSale.tel }</td>
                                 </tr>
                                 </tbody></table>
                             <div class="btn"> <a href="javascript:void(0);" class="sure" onclick="doBuyTicket()">确定支付</a></div>
@@ -179,14 +263,24 @@ function Step03_selectSeat (el) {
                     </div>
                 </div>
             `
+
+        layer.open({
+            type: 1,
+            skin: 'demo-class', //加上边框
+            area: ['689px', '403px'], //宽高
+            title: '订单信息',
+            content: content
         });
     });
 }
 
 function doBuyTicket () {
+
+    // 提示购买成功
     layer.confirm('购买成功！', {
         btn: ['好的'] //按钮
     }, function(){
         top.window.postMessage('closeIFrame', '*');
+        window.location.reload()
     });
 }
