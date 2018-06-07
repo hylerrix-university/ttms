@@ -1,132 +1,321 @@
+.search {
+    margin-top: 10px;
+}
+
+
+/*弹出框订单信息*/
+.payBox {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    z-index: 400;
+}
+
+.payBox h1.ico1 {
+    background: url(../img/f_ico1.jpg) no-repeat left top;
+}
+
+.payBox h1 {
+    margin: 0 0 28px 0;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 63px;
+    color: #a5a5a5;
+    font-size: 19px;
+    font-family: 微软雅黑;
+    padding-right: 16px;
+    font-weight: normal;
+}
+
+.payBox h1 a.close {
+    float: right;
+    width: 29px;
+    height: 27px;
+    display: block;
+    margin-top: 11px;
+}
+
 a {
+    text-decoration: none;
+    color: #666666;
+    outline: none;
+}
+
+.payInfo_main {
+    color: #333;
+    font-family: 微软雅黑;
+    font-size: 14px;
+    margin-top: 25px;
+}
+
+.payInfo_main table {
+    margin-left: 43px;
+}
+
+.payInfo_main th {
+    font-size: 18px;
+    text-align: left;
+    color: #333;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.payInfo_main th span {
+    color: #e60020;
+}
+
+.payInfo_main td {
+    padding-bottom: 5px;
+}
+
+.payInfo_main td span {
+    color: #e60020;
+    font-size: 16px;
+}
+
+.payInfo_main td b {
+    display: inline-block;
+    background: url(../img/piao.jpg) repeat-x left top;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.payInfo_main .btn {
+    position: absolute;
+    bottom: 0;
+    background: url(../img/bg2.jpg) repeat-x left top;
+    height: 81px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.payInfo_main .btn a {
+    display: inline-block;
+    width: 105px;
+    height: 44px;
+    line-height: 44px;
+    font-family: 微软雅黑;
+    color: #fff;
+    background: #f0002d;
+    margin-top: 18px;
+}
+
+/**/
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+*, :after, :before {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+}
+
+.ticket-item {
+    position: relative;
+    overflow: hidden;
+    margin-top: .625rem;
+    margin-top: 2.7vw;
+}
+
+li {
+    list-style: none;
+}
+
+.ticket-item[data-status=ALL_BUY_FAILURE] .right-area, .ticket-item[data-status=ALL_BUY_FAILURE] .right-area .ticket-name, .ticket-item[data-status=ALL_BUY_FAILURE] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=ALL_EXCHANGED] .right-area, .ticket-item[data-status=ALL_EXCHANGED] .right-area .ticket-name, .ticket-item[data-status=ALL_EXCHANGED] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=ALL_EXPIRED_NOT_SUPPORT_REFUND] .right-area, .ticket-item[data-status=ALL_EXPIRED_NOT_SUPPORT_REFUND] .right-area .ticket-name, .ticket-item[data-status=ALL_EXPIRED_NOT_SUPPORT_REFUND] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=ALL_REFUNDED] .right-area, .ticket-item[data-status=ALL_REFUNDED] .right-area .ticket-name, .ticket-item[data-status=ALL_REFUNDED] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=ALL_REFUNDED_FAILURE] .right-area, .ticket-item[data-status=ALL_REFUNDED_FAILURE] .right-area .ticket-name, .ticket-item[data-status=ALL_REFUNDED_FAILURE] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=ALL_REFUNDING] .right-area, .ticket-item[data-status=ALL_REFUNDING] .right-area .ticket-name, .ticket-item[data-status=ALL_REFUNDING] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=disabled] .right-area, .ticket-item[data-status=disabled] .right-area .ticket-name, .ticket-item[data-status=disabled] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=endorse_success_no_refund] .right-area, .ticket-item[data-status=endorse_success_no_refund] .right-area .ticket-name, .ticket-item[data-status=endorse_success_no_refund] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=endorse_success_refund_faild] .right-area, .ticket-item[data-status=endorse_success_refund_faild] .right-area .ticket-name, .ticket-item[data-status=endorse_success_refund_faild] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=endorse_success_refunded] .right-area, .ticket-item[data-status=endorse_success_refunded] .right-area .ticket-name, .ticket-item[data-status=endorse_success_refunded] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=endorse_success_refunding] .right-area, .ticket-item[data-status=endorse_success_refunding] .right-area .ticket-name, .ticket-item[data-status=endorse_success_refunding] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=failed] .right-area, .ticket-item[data-status=failed] .right-area .ticket-name, .ticket-item[data-status=failed] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=PARTLY_EXCHANGED_EXPIRED] .right-area, .ticket-item[data-status=PARTLY_EXCHANGED_EXPIRED] .right-area .ticket-name, .ticket-item[data-status=PARTLY_EXCHANGED_EXPIRED] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=PARTLY_EXCHANGED_EXPIRED_REFUNDED] .right-area, .ticket-item[data-status=PARTLY_EXCHANGED_EXPIRED_REFUNDED] .right-area .ticket-name, .ticket-item[data-status=PARTLY_EXCHANGED_EXPIRED_REFUNDED] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=PARTLY_EXCHANGED_REFUND_FAILURE] .right-area, .ticket-item[data-status=PARTLY_EXCHANGED_REFUND_FAILURE] .right-area .ticket-name, .ticket-item[data-status=PARTLY_EXCHANGED_REFUND_FAILURE] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=PARTLY_EXCHANGED_REFUNDED] .right-area, .ticket-item[data-status=PARTLY_EXCHANGED_REFUNDED] .right-area .ticket-name, .ticket-item[data-status=PARTLY_EXCHANGED_REFUNDED] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=refunded] .right-area, .ticket-item[data-status=refunded] .right-area .ticket-name, .ticket-item[data-status=refunded] .right-area .ticket-name .endorse-ticket, .ticket-item[data-status=used] .right-area, .ticket-item[data-status=used] .right-area .ticket-name, .ticket-item[data-status=used] .right-area .ticket-name .endorse-ticket {
+    color: #c8c8c8;
+}
+
+.ticket-item .ticket-body, .ticket-item .ticket-body .left-area {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+.ticket-item .ticket-body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    background: #fff;
+    z-index: 10;
+}
+
+.ticket-item .ticket-body .left-area {
+    width: 3.125rem;
+    width: 13.3vw;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-right: 1px dashed #ebebeb;
+}
+
+.ticket-item .ticket-body, .ticket-item .ticket-body .left-area {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.ticket-item .ticket-body .left-area:after, .ticket-item .ticket-body .left-area:before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -6px;
+    width: 12px;
+    height: 6px;
+    background: #f8f8f8;
+}
+
+.ticket-item .ticket-body .left-area:before {
+    top: 0;
+    border-radius: 0 0 12px 12px;
+}
+
+ticket-item[data-status=used] .left-area .biztype-tag {
+    background-color: #c8c8c8;
+}
+
+.ticket-item .ticket-body .left-area .biztype-tag {
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: .75rem;
+    width: 1.5rem;
+    width: 6.4vw;
+    height: 1.5rem;
+    height: 6.4vw;
+    border-radius: .75rem;
+    border-radius: 3.2vw;
+    line-height: 1.5rem;
+    line-height: 6.4vw;
+}
+
+.bg-primary {
+    background-color: #ff4d64;
+}
+
+.ticket-item .ticket-body .right-area {
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    position: relative;
+    padding-left: .9375rem;
+    padding: 4vw 1.3vw 4vw 4vw;
+    padding-top: .9375rem;
+    padding-bottom: .9375rem;
+    padding-right: .3125rem;
+    color: #999;
+}
+
+.ticket-item .ticket-body .right-area .ticket-name {
+    font-size: 1rem;
+    color: #000;
+}
+
+.ticket-item .ticket-body .right-area .ticket-showtime {
+    margin-top: .375rem;
+    margin-top: 1.6vw;
+    font-size: .75rem;
+}
+
+.ticket-item .ticket-body .right-area .sale-info, .ticket-item .ticket-body .right-area .ticket-cinemaname, .ticket-item .ticket-body .right-area .ticket-unpay-ammount, .ticket-item .ticket-body .right-area .ticket-unpay-countdown {
+    margin-top: .25rem;
+    margin-top: 1.1vw;
+    font-size: .75rem;
+}
+
+.ticket-item .ticket-body .show-status[data-status=ALL_BUYING], .ticket-item .ticket-body .show-status[data-status=ALL_EXCHANGED], .ticket-item .ticket-body .show-status[data-status=ALL_EXPIRED_NOT_SUPPORT_REFUND], .ticket-item .ticket-body .show-status[data-status=ALL_REFUNDED], .ticket-item .ticket-body .show-status[data-status=ALL_REFUNDED_FAILURE], .ticket-item .ticket-body .show-status[data-status=ALL_REFUNDING], .ticket-item .ticket-body .show-status[data-status=ALL_WAIT_FOR_PAY], .ticket-item .ticket-body .show-status[data-status=endorse_success_no_refund], .ticket-item .ticket-body .show-status[data-status=endorse_success_refund_faild], .ticket-item .ticket-body .show-status[data-status=endorse_success_refunded], .ticket-item .ticket-body .show-status[data-status=endorse_success_refunding], .ticket-item .ticket-body .show-status[data-status=endorsing], .ticket-item .ticket-body .show-status[data-status=failed], .ticket-item .ticket-body .show-status[data-status=failing], .ticket-item .ticket-body .show-status[data-status=pay_success], .ticket-item .ticket-body .show-status[data-status=refunded], .ticket-item .ticket-body .show-status[data-status=refunding], .ticket-item .ticket-body .show-status[data-status=un_pay], .ticket-item .ticket-body .show-status[data-status=used] {
+    min-width: 6.25rem;
+    min-width: 26.7vw;
+    width: 6.25rem;
+    width: 26.7vw;
+}
+
+.ticket-item .ticket-body .show-status {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 52px;
+}
+
+.ticket-item .ticket-body .show-status .refund {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: red;
+    background-color: transparent;
+    background-image: none;
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    font-size: 12px;
+    border-radius: 120px;
+    border: 1px solid red;
+}
+
+.ticket-item .ticket-body .show-status .critique {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #ffc600;
+    background-color: transparent;
+    background-image: none;
+    box-sizing: border-box;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 12px;
+    font-size: 12px;
+    border-radius: 120px;
+    border: 1px solid #ffc600;
+}
+a {
+    color: #349cec;
     text-decoration: none;
 }
 
-a:link {
-    color: #eb002a;
-}
-
-/*电影卡片*/
-
-.tab-movie-list {
-    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.movie-card-wrap {
-    display: block;
-    width: 161px;
-    height: 273px;
-    overflow: hidden;
-    position: relative;
-    float: left;
-    line-height: 0;
-}
-
-.movie-card {
-    position: relative;
-    display: inline-block;
-    _display: block;
-    background: #000;
-}
-
-.movie-card .movie-card-tag {
-    font-size: 0;
-    width: 0;
-    height: 0;
-    position: relative;
-    z-index: 1;
-}
-
-.movie-card .movie-card-tag i {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-}
-
-.movie-card .movie-card-poster {
-    -webkit-mask-image: -webkit-linear-gradient(top,#142842 60%,transparent 120%,transparent);
-}
-
-.tab-movie-list img {
-    border: none;
-    outline: 0;
-    font-size: 0;
-    line-height: 0;
-}
-
-.movie-card .movie-card-name span.bt-l {
-    margin-left: 5px;
-    float: left;
-    width: 70%;
-}
-
-.movie-card .movie-card-name span.bt-r {
-    margin-right: 5px;
-    float: right;
-    width: 20%;
-}
-
-.movie-card .movie-card-name {
-    position: absolute;
-    bottom: 0;
-    height: 56px;
-    width: 100%;
-}
-
-.movie-card .movie-card-name span.bt-l {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.movie-card .movie-card-name span {
-    display: block;
-    line-height: 24px;
-    height: 24px;
-    margin-top: 30px;
-    color: #fff;
-}
-
-.movie-card .movie-card-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 160px;
-    height: 224px;
-    color: #fff;
-}
-
-.movie-card .movie-card-info .movie-card-mask {
-    width: 160px;
-    height: 225px;
-    background-color: #000;
-}
-
-.movie-card .movie-card-info .movie-card-list {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 125px;
-    padding-top: 30px;
-    padding-left: 25px;
-}
-
-.movie-card-wrap .movie-card-buy {
-    display: block;
-    height: 40px;
-    width: 202px;
-    line-height: 40px;
-    padding-left: 58px;
-    background: #eb002a;
-    color: #fff;
-}
-
-/*弹出框皮肤*/
-
-body .demo-class .layui-layer-title{background:#c00; color:#fff; border: none;}
-body .demo-class .layui-layer-btn{border-top:1px solid #E9E7E7}
-body .demo-class .layui-layer-btn a{background:#333;}
-body .demo-class .layui-layer-btn .layui-layer-btn1{background:#999;}

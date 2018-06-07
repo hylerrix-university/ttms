@@ -60,10 +60,10 @@ body a{
 .navbar-default .navbar-form{
 	border: none;
 }
-.navbar-default .navbar-nav>.open>a, 
-.navbar-default .navbar-nav>.open>a:focus, 
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
 .navbar-default .navbar-nav>.open>a:hover{
-	background-color: transparent !important; 
+	background-color: transparent !important;
 }
 .globals{
 	color: #fff !important;
@@ -117,7 +117,7 @@ body a{
 		width: 250px;
 		margin-top: 56px;
 	}
-} 
+}
 .sidebar ul li{
 	height：30px;
 	line-height: 30px;
@@ -139,13 +139,13 @@ body a{
 i.icon{
     margin-right: 6px;
 }
-/* page-wrapper*/ 
+/* page-wrapper*/
 // #page-wrapper {
-//     min-height: 768px;  
+//     min-height: 768px;
 // }
 
 @media(min-width:768px) {
-    #page-wrapper {	
+    #page-wrapper {
         margin: 0 0 0 250px;
         border-left: 1px solid #e7e7e7;
         position: relative;
@@ -153,17 +153,17 @@ i.icon{
 }
 @media (min-width: 768px) {
 	#page-wrapper {
-	    min-height: 768px;  
+	    min-height: 768px;
 	}
 }
 @media(max-width: 769px) {
 	#page-wrapper {
-	    min-height: 1080px;  
+	    min-height: 1080px;
 	}
 }
 @media(min-width:1900px) {
 	#page-wrapper {
-	    min-height: 1080px;  
+	    min-height: 1080px;
 	}
 }
 /* Home */
@@ -177,12 +177,12 @@ i.icon{
     display: block;
     overflow: hidden;
     background-color: #fff;
-    background-image: url("../img/HomeBg.jpg"); 
+    background-image: url("../img/HomeBg.jpg");
     background-position: 60% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
-@media (max-width: 760px) { 
+@media (max-width: 760px) {
 	.bgImg{
 		top: 56px;
 		height: 1080px;
@@ -204,8 +204,8 @@ i.icon{
 	font-size: 52px;
 	font-weight: 600;
 	font-family: STXingkai;
-	background: linear-gradient(to bottom right, red , blue); 
-	
+	background: linear-gradient(to bottom right, red , blue);
+
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 
@@ -277,7 +277,7 @@ i.icon{
 	border-radius: 3px;
 	outline: none;
 	-webkit-border-radius: 3px;
-    text-shadow: 1px 1px #1f272b;	
+    text-shadow: 1px 1px #1f272b;
 	text-align: center;
 	cursor: pointer;
 }
@@ -342,7 +342,7 @@ a:link{
 	margin: 0 auto;
 	padding: 30px 0 20px 40px;
 }
-.ol li{	
+.ol li{
 	float: left;
     margin-left: 16px;
     font-size: 26px;
