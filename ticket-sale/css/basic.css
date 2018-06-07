@@ -1,0 +1,132 @@
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #eb002a;
+}
+
+/*电影卡片*/
+
+.tab-movie-list {
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.movie-card-wrap {
+    display: block;
+    width: 161px;
+    height: 273px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    line-height: 0;
+}
+
+.movie-card {
+    position: relative;
+    display: inline-block;
+    _display: block;
+    background: #000;
+}
+
+.movie-card .movie-card-tag {
+    font-size: 0;
+    width: 0;
+    height: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.movie-card .movie-card-tag i {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.movie-card .movie-card-poster {
+    -webkit-mask-image: -webkit-linear-gradient(top,#142842 60%,transparent 120%,transparent);
+}
+
+.tab-movie-list img {
+    border: none;
+    outline: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+.movie-card .movie-card-name span.bt-l {
+    margin-left: 5px;
+    float: left;
+    width: 70%;
+}
+
+.movie-card .movie-card-name span.bt-r {
+    margin-right: 5px;
+    float: right;
+    width: 20%;
+}
+
+.movie-card .movie-card-name {
+    position: absolute;
+    bottom: 0;
+    height: 56px;
+    width: 100%;
+}
+
+.movie-card .movie-card-name span.bt-l {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movie-card .movie-card-name span {
+    display: block;
+    line-height: 24px;
+    height: 24px;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.movie-card .movie-card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 224px;
+    color: #fff;
+}
+
+.movie-card .movie-card-info .movie-card-mask {
+    width: 160px;
+    height: 225px;
+    background-color: #000;
+}
+
+.movie-card .movie-card-info .movie-card-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 125px;
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+.movie-card-wrap .movie-card-buy {
+    display: block;
+    height: 40px;
+    width: 202px;
+    line-height: 40px;
+    padding-left: 58px;
+    background: #eb002a;
+    color: #fff;
+}
+
+/*弹出框皮肤*/
+
+body .demo-class .layui-layer-title{background:#c00; color:#fff; border: none;}
+body .demo-class .layui-layer-btn{border-top:1px solid #E9E7E7}
+body .demo-class .layui-layer-btn a{background:#333;}
+body .demo-class .layui-layer-btn .layui-layer-btn1{background:#999;}

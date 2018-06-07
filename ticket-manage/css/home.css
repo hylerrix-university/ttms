@@ -139,9 +139,9 @@ body a{
 i.icon{
     margin-right: 6px;
 }
-/* page-wrapper*/
+/* page-wrapper*/ 
 // #page-wrapper {
-//     min-height: 768px;
+//     min-height: 768px;  
 // }
 
 @media(min-width:768px) {
